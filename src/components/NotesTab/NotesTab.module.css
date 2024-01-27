@@ -1,0 +1,163 @@
+.tab{
+width: 76%;
+}
+.tab_head{
+    height: 70px;
+    width: 100%;
+    background-color: #001F8B;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1.2rem;
+}
+.tab_head .head_title{
+    color: #fff;
+    font-size: 1.1rem;
+}
+.tab_body{
+    padding: 0.7rem;
+    background-color: #DAE5F5;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 355px;;
+}
+
+.back_arrow{
+    display: none;
+}
+.tab_body::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+  
+  .tab_body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9); 
+    border-radius: 0.2rem;
+  }
+   
+  .tab_body::-webkit-scrollbar-thumb {
+    background: #fff; 
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 0.3rem;
+    
+  }
+  
+  
+
+
+
+
+/* .tab_body div{
+    width: 94%;
+    height: 200px;
+    background-color: aquamarine;
+    margin: 1rem;
+    border-radius: 0.4rem;
+    padding: 1.5rem 1.9rem;
+    padding: 0.5rem;
+    
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+} */
+.tab_box{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #001F8B;
+    width: 76%;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.tab_box textarea{
+    margin: 0.5rem;
+    width: 96%;
+    height: 22vh;
+    border-radius: 0.4rem;
+    border: none;
+    outline: none;
+    padding: 0.7rem 0 0 0.7rem;
+    font-size: 1.2rem;
+    font-family: Inter;
+    resize: none;
+}
+::placeholder{
+    font-size: 1.2rem;
+    
+}
+.tab_box button{
+    position: absolute;
+    right: 1.8rem;
+    bottom: 1.8rem;
+    padding: 0.2rem;
+    cursor:not-allowed;
+    background-color: transparent;
+    border: none;
+
+}
+.tab_box button img{
+    width: 80%;
+}
+
+.tab_box .disabledButton {
+    
+    cursor: not-allowed;
+    filter: saturate(0%);
+    opacity: 0.5;
+    
+    
+}
+.tab_box .enabledButton {
+    
+    cursor: pointer;
+    filter: saturate(100%);
+    opacity: 1;
+    
+    
+}
+
+
+@media (max-width:700px) {
+    .tab{
+        width: 100%;
+    }
+    .tab_head{
+        width: 95%;
+    }
+   .tab_box{
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+   }
+   .tab_box textarea{
+    width: 90%;
+    height: 20vh;
+   }
+   .tab_body{
+    padding: 0;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    height: 100vh;
+}
+.back_arrow{
+    display: block;
+}
+    
+}
+@media (max-width:414px) {
+    .tab_body{
+        height: 68vh;
+    }
+}
+@media (max-height:600px) {
+    .tab_body{
+        height: 63vh;
+    }
+}
+@media (max-height:595px) {
+    .tab_body{
+        height: 55vh;
+    }
+}

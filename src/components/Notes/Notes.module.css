@@ -1,0 +1,12 @@
+.notes{
+    width: 100%;
+    display: flex;
+}
+.notes .desktop_view{
+width: 24%;
+}
+@media (max-width:700px) {
+  .notes .desktop_view{
+    display: none;
+  }    
+}

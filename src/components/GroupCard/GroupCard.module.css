@@ -1,0 +1,14 @@
+.group{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin: 0.1rem 0;
+    padding: 0.6rem;
+    padding-left: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 1rem;
+}
+.group:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
