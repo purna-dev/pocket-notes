@@ -12,7 +12,7 @@ function NotesPage() {
     //   return navigate('/')
       
     // }
-    console.log(location)
+    console.log('Write Your Notes!')
      
   },[location])
 

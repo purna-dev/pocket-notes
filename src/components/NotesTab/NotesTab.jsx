@@ -26,7 +26,7 @@ function NotesTab({groupdata,location}) {
   
   const handleChange = (e)=>{
     let textNote = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1)
-      console.log(textNote)
+      // console.log(textNote)
     //  setnotesDetails({...notesDetails,note:textNote.trim()})
 
       setnewVal(textNote)
@@ -154,7 +154,7 @@ if(!localStorage.getItem(groupdata.groupName)){
 
 if(localStorage.getItem('groups')){
   let x=JSON.parse(localStorage.getItem(groupdata.groupName))
-  console.log(x.length)
+  // console.log(x.length)
   if(!x.length){
     sethasnote(false)
   
@@ -163,7 +163,7 @@ if(localStorage.getItem('groups')){
   }
 }
 
-console.log(notesDetails)
+// console.log(notesDetails)
 
 
 

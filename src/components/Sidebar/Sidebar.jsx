@@ -12,22 +12,22 @@ function Sidebar({handlemodel,isupdated}) {
 
   const navigate = useNavigate()
   let ismodeltrue = false;
+  
+  
   // let isnewdata =false;
   // isnewdata = isupdated
 
-  console.log(groupsdata)
-
-  
+  // console.log(groupsdata)
 
   const handleAdd = (e)=>{
-    console.log(e)
+    // console.log(e)
     ismodeltrue = true
   handlemodel(ismodeltrue)
 
   }
 
   const handleGroupclick = (groupdata)=>{
-    console.log(groupdata)
+    // console.log(groupdata)
     
     if(groupdata){
       navigate('/notes',{state:groupdata})
@@ -39,10 +39,10 @@ function Sidebar({handlemodel,isupdated}) {
 
   const handleclickstate = (e,Gname)=>{
     if(e){
-
-          console.log(groupCard.current.childNodes)
+          
+          // console.log(groupCard.current.childNodes)
           groupCard.current.childNodes.forEach((element,i) => {
-          console.log(element.childNodes)
+          // console.log(element.childNodes)
 
           if(element.childNodes[1].innerText === Gname){
 

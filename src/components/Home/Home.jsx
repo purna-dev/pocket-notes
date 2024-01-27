@@ -7,29 +7,30 @@ import ModelCard from '../ModelCard/ModelCard'
 
 function Home() {
 
-  let [isModel,setisModel] = useState(null);
+  let [isModel,setisModel] = useState(false);
   let [isupdated,setisupdated] = useState('');
 
 
-  
 
   const handleModel = (model)=>{
 
-    console.log(model)
     setisModel(model)
-  
 
   }
 
   
   const updatedLocaldata = (isupdated) => {
     // console.log(isupdated)
-    console.log(isupdated)
+    // console.log(isupdated)
     setisupdated(isupdated)
   }
 
   useEffect(()=>{
-    console.log('Home Page !')
+    
+    // if(isModel){
+    //   console.log('True Statement')
+    //   setisModel(true)
+    // }
   },[])
 
   return (

@@ -27,12 +27,12 @@ function ModelCard({handlemodel,updatedlocaldata}) {
 
 
     const handleColor = (e,color,i)=>{
-        console.log(color)
+        // console.log(color)
         setisSelected(!isSelected)
         
 
         if(e){
-        console.log(divRef.current.childNodes[i])
+        // console.log(divRef.current.childNodes[i])
         divRef.current.childNodes.forEach(element => {
             element.style.border = '2px solid rgba(0, 0, 0, 0)'
             
@@ -59,13 +59,11 @@ function ModelCard({handlemodel,updatedlocaldata}) {
             setGname(name)
     }
 
-    console.log(Gname)
-
-
-
+    // console.log(Gname)
 
 
     const handleCreate = (e)=>{
+
         // setgroupDetails({...groupDetails,groupName:Gname})
         
         if(e){
@@ -100,7 +98,7 @@ function ModelCard({handlemodel,updatedlocaldata}) {
                 seterrChecker(true)
                 
             isValid = false
-            console.log(updater)
+            // console.log(updater)
             }
         })
         if(groupDetails.groupName === ''){
@@ -109,12 +107,14 @@ function ModelCard({handlemodel,updatedlocaldata}) {
         }
         if(groupDetails.Color === ''){
             isValid = false
-            alert('Select Group color !')
+            alert('Choose group color !')
         }
         
 
         if(isValid){
             // setgroups([...groups,groupDetails])
+
+            
             
         
 
@@ -123,10 +123,11 @@ function ModelCard({handlemodel,updatedlocaldata}) {
             
             let newad =  JSON.parse(localStorage.getItem('groups'))
             localStorage.setItem('groups',JSON.stringify([...newad,groupDetails]))
-            handlemodel(false)
+            // handlemodel(false)
             updatedlocaldata(groupDetails.groupName)
 
-            alert('Group Created Successfully !')            
+            alert('Group Created Successfully !') 
+            handlemodel(false)           
 
 
         }
@@ -145,7 +146,7 @@ function ModelCard({handlemodel,updatedlocaldata}) {
     const getlocalData = ()=>{
         let data =localStorage.getItem('groups')
         if(data){
-            console.log(JSON.parse(data))
+            // console.log(JSON.parse(data))
             setlocaldata(JSON.parse(data))
         }
         else{
@@ -160,8 +161,8 @@ function ModelCard({handlemodel,updatedlocaldata}) {
         seterrChecker(false)
         getlocalData()
 
-        console.log(groupDetails.groupName)
-        console.log(updatedlocaldata)
+        // console.log(groupDetails.groupName)
+        // console.log(updatedlocaldata)
 
     },[updater])
 
@@ -171,7 +172,7 @@ function ModelCard({handlemodel,updatedlocaldata}) {
     <>
     <div className={style.wrapper} onClick={()=>handlemodel(false)}>
     </div>
-    <div className={style.model} onClick={()=>handlemodel(true)}>
+    <div className={style.model}>
         <h2>Create New group</h2>
         <div>
             <label>Group Name</label>

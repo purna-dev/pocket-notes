@@ -12,7 +12,7 @@ function Notes({groupdata,location}) {
 
   const handleModel = (model)=>{
 
-    console.log(model)
+    // console.log(model)
     setisModel(model)
   
 
@@ -21,7 +21,7 @@ function Notes({groupdata,location}) {
   
   const updatedLocaldata = (isupdated) => {
     // console.log(isupdated)
-    console.log(isupdated)
+    // console.log(isupdated)
     setisupdated(isupdated)
   }
 
